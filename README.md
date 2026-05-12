@@ -1,5 +1,8 @@
 # Subscriber
 
+LINK GDRIVE GAMBAR LAPORAN:
+https://drive.google.com/drive/folders/1i5fZG1KSFshurlHVGl3xys4egQD3bWch?usp=sharing 
+
 ## Penjelasan Singkat
 
 Repository ini berisi program subscriber untuk Tutorial A Event-Driven Architecture.
@@ -57,3 +60,37 @@ Pada mesin saya, jumlah queue sempat meningkat hingga sekitar 10 message sebelum
 Grafik pada RabbitMQ menunjukkan bahwa queue meningkat ketika publisher mengirim banyak message dalam waktu singkat, lalu perlahan turun kembali setelah subscriber selesai memproses semua message tersebut.
 
 Menurut saya, hal ini menunjukkan manfaat message broker dalam event-driven architecture. Ketika subscriber sedang lambat, message tidak langsung hilang atau menyebabkan sistem crash. RabbitMQ tetap menyimpan message di queue sampai subscriber siap memprosesnya satu per satu.
+
+## Menjalankan Minimal Tiga Subscriber
+
+
+Pada tahap ini, saya menjalankan tiga subscriber secara bersamaan pada terminal yang berbeda. Semua subscriber mendengarkan queue yang sama, yaitu `user_created`.
+
+Setelah itu, saya menjalankan publisher beberapa kali secara cepat menggunakan command:
+
+```bash
+cargo run
+```
+
+Dalam satu kali run, publisher mengirim 5 message. Karena publisher dijalankan beberapa kali, RabbitMQ menerima banyak message dalam waktu singkat.
+
+Namun berbeda dengan sebelumnya, sekarang terdapat tiga subscriber yang aktif secara bersamaan. Hal ini terlihat pada dashboard RabbitMQ, di mana terdapat:
+
+```text
+Connections: 3
+Channels: 3
+Consumers: 3
+```
+
+Karena terdapat beberapa subscriber, RabbitMQ dapat membagi message ke beberapa subscriber sekaligus. Akibatnya, queue diproses lebih cepat dan spike pada grafik menjadi lebih kecil dibandingkan ketika hanya menggunakan satu subscriber.
+
+Menurut saya, hal ini menunjukkan salah satu keuntungan event-driven architecture. Ketika jumlah request meningkat, sistem dapat diskalakan dengan menambahkan subscriber baru sehingga beban kerja tidak hanya diproses oleh satu subscriber saja.
+
+Beberapa hal yang menurut saya masih bisa ditingkatkan dari kode ini adalah:
+
+1. Menambahkan logging yang lebih rapi agar monitoring lebih mudah dilakukan.
+2. Menambahkan retry mechanism jika subscriber gagal memproses message.
+3. Menambahkan environment variable untuk konfigurasi RabbitMQ agar tidak hardcoded di source code.
+4. Menambahkan dead-letter queue untuk menangani message yang gagal diproses.
+
+
