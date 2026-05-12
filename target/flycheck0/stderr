@@ -1,0 +1,60 @@
+   0.201788600s  INFO prepare_target{force=false package_id=subscriber v0.1.0 (C:\Users\indra\subscriber) target="subscriber"}: cargo::core::compiler::fingerprint: fingerprint error for subscriber v0.1.0 (C:\Users\indra\subscriber)/Check { test: false }/TargetInner { name: "subscriber", doc: true, ..: with_path("C:\\Users\\indra\\subscriber\\src\\main.rs", Edition2021) }
+   0.201858500s  INFO prepare_target{force=false package_id=subscriber v0.1.0 (C:\Users\indra\subscriber) target="subscriber"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\indra\subscriber\target\debug\.fingerprint\subscriber-63fa6e596c6ecdd0\bin-subscriber`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.254977500s  INFO prepare_target{force=false package_id=subscriber v0.1.0 (C:\Users\indra\subscriber) target="subscriber"}: cargo::core::compiler::fingerprint: fingerprint error for subscriber v0.1.0 (C:\Users\indra\subscriber)/Check { test: true }/TargetInner { name: "subscriber", doc: true, ..: with_path("C:\\Users\\indra\\subscriber\\src\\main.rs", Edition2021) }
+   0.255011100s  INFO prepare_target{force=false package_id=subscriber v0.1.0 (C:\Users\indra\subscriber) target="subscriber"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\indra\subscriber\target\debug\.fingerprint\subscriber-e0ba25b48a175e84\test-bin-subscriber`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+    Checking subscriber v0.1.0 (C:\Users\indra\subscriber)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.11s
+warning: the following packages contain code that will be rejected by a future version of Rust: net2 v0.2.39, nom v4.2.3
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 2`

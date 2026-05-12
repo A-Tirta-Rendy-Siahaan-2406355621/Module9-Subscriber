@@ -1,0 +1,10 @@
+C:\Users\indra\subscriber\target\debug\deps\amq_protocol_types-7a15ca847a234073.d: C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\lib.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\types.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\value.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\flags.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\generation.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\parsing.rs
+
+C:\Users\indra\subscriber\target\debug\deps\libamq_protocol_types-7a15ca847a234073.rmeta: C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\lib.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\types.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\value.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\flags.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\generation.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\parsing.rs
+
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\lib.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\types.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\value.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\flags.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\generation.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\amq-protocol-types-1.2.0\src\parsing.rs:
