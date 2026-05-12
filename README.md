@@ -61,6 +61,12 @@ Grafik pada RabbitMQ menunjukkan bahwa queue meningkat ketika publisher mengirim
 
 Menurut saya, hal ini menunjukkan manfaat message broker dalam event-driven architecture. Ketika subscriber sedang lambat, message tidak langsung hilang atau menyebabkan sistem crash. RabbitMQ tetap menyimpan message di queue sampai subscriber siap memprosesnya satu per satu.
 
+### Simulasi pada Cloud Environment
+
+Jika simulasi slow subscriber dijalankan pada cloud environment, maka queue dapat meningkat lebih besar dibandingkan pada local machine karena publisher dan subscriber dapat berjalan pada beberapa instance atau virtual machine yang berbeda.
+
+Selain itu, latency jaringan juga dapat mempengaruhi kecepatan pengiriman dan pemrosesan message. Oleh karena itu, konfigurasi firewall, resource server, dan monitoring RabbitMQ menjadi lebih penting pada cloud deployment dibandingkan ketika dijalankan secara lokal.
+
 ## Menjalankan Minimal Tiga Subscriber
 
 
