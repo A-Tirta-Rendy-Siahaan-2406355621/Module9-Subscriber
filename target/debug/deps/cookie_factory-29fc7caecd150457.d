@@ -1,0 +1,11 @@
+C:\Users\indra\subscriber\target\debug\deps\cookie_factory-29fc7caecd150457.d: C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\lib.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\gen.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\internal.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\bytes.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\combinator.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\multi.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\sequence.rs
+
+C:\Users\indra\subscriber\target\debug\deps\libcookie_factory-29fc7caecd150457.rmeta: C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\lib.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\gen.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\internal.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\bytes.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\combinator.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\multi.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\sequence.rs
+
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\lib.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\gen.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\internal.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\bytes.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\combinator.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\multi.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cookie-factory-0.3.3\src\sequence.rs:

@@ -1,0 +1,11 @@
+C:\Users\indra\subscriber\target\debug\deps\futures_lite-366c5234668c3e37.d: C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\lib.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\future.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\prelude.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\stream.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\io.rs
+
+C:\Users\indra\subscriber\target\debug\deps\libfutures_lite-366c5234668c3e37.rlib: C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\lib.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\future.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\prelude.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\stream.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\io.rs
+
+C:\Users\indra\subscriber\target\debug\deps\libfutures_lite-366c5234668c3e37.rmeta: C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\lib.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\future.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\prelude.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\stream.rs C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\io.rs
+
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\lib.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\future.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\prelude.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\stream.rs:
+C:\Users\indra\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-lite-1.13.0\src\io.rs:

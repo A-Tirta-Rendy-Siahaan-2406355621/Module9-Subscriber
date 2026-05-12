@@ -31,3 +31,29 @@ Penjelasannya:
 - `5672` adalah port default RabbitMQ untuk komunikasi AMQP.
 
 Jadi, `guest:guest@localhost:5672` berarti program subscriber akan terhubung ke RabbitMQ yang berjalan di komputer lokal menggunakan username `guest`, password `guest`, dan port `5672`.
+
+
+## Simulasi Slow Subscriber
+
+
+Pada tahap ini, saya mensimulasikan subscriber yang lambat dengan mengaktifkan kode berikut pada `main.rs` subscriber:
+
+```rust
+thread::sleep(ten_millis);
+```
+
+Kode tersebut membuat subscriber menunggu selama 1 detik sebelum memproses setiap message yang diterima dari RabbitMQ. Dengan demikian, proses konsumsi message menjadi lebih lambat dibandingkan sebelumnya.
+
+Setelah itu, saya menjalankan publisher beberapa kali secara cepat menggunakan command:
+
+```bash
+cargo run
+```
+
+Dalam satu kali run, publisher mengirim 5 message ke queue `user_created`. Karena publisher dijalankan beberapa kali secara cepat, jumlah message yang masuk ke RabbitMQ meningkat lebih cepat daripada kemampuan subscriber memprosesnya.
+
+Pada mesin saya, jumlah queue sempat meningkat hingga sekitar 10 message sebelum akhirnya turun kembali menjadi 0. Hal ini terjadi karena subscriber tetap memproses message satu per satu secara bertahap.
+
+Grafik pada RabbitMQ menunjukkan bahwa queue meningkat ketika publisher mengirim banyak message dalam waktu singkat, lalu perlahan turun kembali setelah subscriber selesai memproses semua message tersebut.
+
+Menurut saya, hal ini menunjukkan manfaat message broker dalam event-driven architecture. Ketika subscriber sedang lambat, message tidak langsung hilang atau menyebabkan sistem crash. RabbitMQ tetap menyimpan message di queue sampai subscriber siap memprosesnya satu per satu.

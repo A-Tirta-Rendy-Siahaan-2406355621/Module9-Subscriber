@@ -1,5 +1,11 @@
 use borsh::{BorshDeserialize, BorshSerialize};
-use crosstown_bus::{CrosstownBus, HandleError, MessageHandler};
+use futures_util::stream::StreamExt;
+use lapin::{
+    options::*,
+    types::FieldTable,
+    Connection,
+    ConnectionProperties,
+};
 use std::{thread, time};
 
 #[derive(Debug, Clone, BorshDeserialize, BorshSerialize)]
@@ -8,44 +14,58 @@ pub struct UserCreatedEventMessage {
     pub user_name: String,
 }
 
-pub struct UserCreatedHandler;
+#[tokio::main]
+async fn main() {
+    let conn = Connection::connect(
+        "amqp://guest:guest@127.0.0.1:5672/%2f",
+        ConnectionProperties::default(),
+    )
+    .await
+    .expect("Failed to connect");
 
-impl MessageHandler<UserCreatedEventMessage> for UserCreatedHandler {
-    fn handle(&self, message: Box<UserCreatedEventMessage>) -> Result<(), HandleError> {
-        let ten_millis = time::Duration::from_millis(1000);
-        let now = time::Instant::now();
+    let channel = conn.create_channel().await.expect("Create channel failed");
 
-        // Untuk simulasi slow subscriber nanti:
-        // thread::sleep(ten_millis);
+    channel
+        .queue_declare(
+            "user_created",
+            QueueDeclareOptions::default(),
+            FieldTable::default(),
+        )
+        .await
+        .expect("Queue declare failed");
 
-        println!(
-            "In Tirta's Computer [2406355621]. Message received: {:?}. Elapsed: {:?}",
-            message,
-            now.elapsed()
-        );
+    let mut consumer = channel
+        .basic_consume(
+            "user_created",
+            "my_consumer",
+            BasicConsumeOptions::default(),
+            FieldTable::default(),
+        )
+        .await
+        .expect("Basic consume failed");
 
-        Ok(())
+    println!("Subscriber berjalan. Menunggu message...");
+
+    while let Some(delivery) = consumer.next().await {
+        if let Ok(delivery) = delivery {
+            let message =
+                UserCreatedEventMessage::try_from_slice(&delivery.data)
+                    .expect("Failed deserialize");
+
+            let ten_millis = time::Duration::from_millis(1000);
+
+            // Uncomment nanti untuk slow subscriber:
+            thread::sleep(ten_millis);
+
+            println!(
+                "In Tirta's Computer [2406355621]. Message received: {:?}",
+                message
+            );
+
+            delivery
+                .ack(BasicAckOptions::default())
+                .await
+                .expect("Ack failed");
+        }
     }
-
-    fn get_handler_action(&self) -> String {
-        "user_created".to_owned()
-    }
-}
-
-fn main() {
-    let listener =
-        CrosstownBus::new_queue_listener("amqp://guest:guest@localhost:5672".to_owned())
-            .unwrap();
-
-    let _ = listener.listen(
-        "user_created".to_owned(),
-        UserCreatedHandler {},
-        crosstown_bus::QueueProperties {
-            auto_delete: false,
-            durable: false,
-            use_dead_letter: true,
-        },
-    );
-
-    loop {}
 }
